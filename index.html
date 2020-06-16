@@ -5,25 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta name="keyword" content="Прокат лодок, Лодки, Прокат, Штурвал, Сервис">
     <meta name="description" content="Сервис проката водного транспорта"> 
-    <title>Штурвал</title> // Текст в закладке
-    <link rel="stylesheet" href="main.css">
+    <title>Штурвал</title> 
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="main.css">
+   
 </head>
 <body>
-    <h1 class="Privet">Штурвал</h1>
-    <h2>Современный сервис проката водного транспорта</h2>
-    <p id="servis">Сервис проката транспортных средств</p>
-    <a href="#servis">Сервис</a>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Штурвал</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+            <a href="#" onclick="slowScroll('#overiew')" title="Преимущества">Преимущества</a>
+            <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+            <a href="#" onclick="slowScroll('#faq')" title="Часто задоваемые вопросы">FAQ</a>
+        </div>
+    </header>
 
-    <ul> <b>В нашем арсенале:</b>
-        <li>Моторные Лодки</li>
-        <li>Катера</li>
-        <li>Парусники</li>
-        <li>Катамараны</li>
-        <li>Каноэ</li>
-    </ul>
-    <script src="main.js">
 
+    <div id="top">
+        <h1>Штурвал</h1>
+       <h2>
+            Современный прокат водного транспорта
+       </h2>
+            
+      
+      
+    
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function slowScroll(id) {
+          $('html, body').animate({
+            scrollTop: $(id).offset().top
+          }, 500);
+        }
+    
+        $(document).on("scroll", function () {
+          if($(window).scrollTop() === 0)
+            $("header").removeClass("fixed");
+            else
+            $("header").attr("class", "fixed");
+        });
     </script>
+
 </body>
-</html>
+</html> 
