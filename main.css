@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(190, 190, 190);
+    font-family: 'Trebuchet MS', 'Comfortaa';
+}
+
+header{
+    width: 100%;
+    padding: 12px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: fixed;
+}
+
+header #logo {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+header #logo span {
+    font-size: 2.5em;
+    line-height: 45px;
+    margin-left: 100px;
+    font-family: 'Montserrat';
+}
+
+@media (min-width: 701) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about {
+        float: right;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700) {
+    #logo {
+        margin-top: 5px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #about {
+        float: left;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 0px;
+}
+
+#about > a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+    margin-right: 10%;
+}
+
+.fixed {
+    z-index: 5000;
+    height: 70px;
+    background-color: white;
+    border-bottom: 1px solid rgb(37, 113, 255); 
+}
+
+header.fixed #logo {
+    color: rgb(37, 113, 255);
+}
+
+.fixed #about a {color: black;}
+.fixed #about a:hover {color: #7c7c7c;}
+
+#top{
+    width: 100%;
+    height: 3000px;
+    background-image: url('https://i.ibb.co/HqVPrPh/bg.jpgэ');
+    background-blend-mode: multiply;
+    background-size: cover;
+    text-align: center;
+}
+
+#top h1{
+    padding-top: 20%;
+}
+
+#top h2{
+    padding-top: 20%;
+    text-align: center;
+}
